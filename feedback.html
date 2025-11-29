@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反馈 - 学习宣传网站</title>
+    <link rel="stylesheet" href="./myweb/FeedbackCss.css">
+</head>
+<body class="font-sans">
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="./myweb/logo.jpg" alt="Logo" class="logo-image">
+                    <a href="#" class="logo">默语心声</a>
+                </div>
+                <div class="nav-links">
+                  <a href="/mywe/bindex.html" class="nav-link">首页</a>
+                    <a href="/myweb/content.html" class="nav-link">网站特色</a>
+                    <a href="/myweb/learning.html" class="nav-link">学习内容</a>
+                    <a href="/myweb/hire.html" class="nav-link">职业招聘</a>
+                    <a href="/myweb/talk.html" class="nav-link">社区交流</a>
+                    <a href="/myweb/feedback.html" class="nav-link">反馈</a>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="page-header">
+        <div class="header-container">
+            <h1 class="header-title">反馈与建议</h1>
+            <p class="header-subtitle">您的反馈对我们至关重要</p>
+        </div>
+    </header>
+
+    <!-- 反馈内容区域 -->
+    <section class="feedback-section">
+        <div class="section-container">
+            <div class="feedback-content">
+                <!-- 反馈表单 -->
+                <div class="feedback-form-container">
+                    <div class="feedback-form">
+                        <h2 class="form-title">请告诉我们您的想法</h2>
+                        
+                        <form class="feedback-form-elements">
+                            <div class="form-group">
+                                <label for="feedback-type" class="form-label">反馈类型</label>
+                                <select id="feedback-type" class="form-select">
+                                    <option value="">请选择反馈类型</option>
+                                    <option value="suggestion">建议</option>
+                                    <option value="bug">问题报告</option>
+                                    <option value="praise">表扬</option>
+                                    <option value="other">其他</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">主题</label>
+                                <input type="text" id="subject" class="form-input" placeholder="请输入反馈主题">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="feedback-content" class="form-label">反馈内容</label>
+                                <textarea id="feedback-content" rows="6" class="form-textarea" placeholder="请详细描述您的反馈内容..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">上传附件（可选）</label>
+                                <div class="file-upload-area">
+                                    <i class="fa fa-cloud-upload upload-icon"></i>
+                                    <p class="upload-text">点击或拖拽文件到此处上传</p>
+                                    <p class="upload-hint">支持图片、文档等格式，最大5MB</p>
+                                    <input type="file" class="file-input" multiple>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">联系邮箱（可选）</label>
+                                <input type="email" id="email" class="form-input" placeholder="请输入您的邮箱，以便我们回复您">
+                            </div>
+                            
+                            <button type="submit" class="submit-button">
+                                提交反馈
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- 帮助信息 -->
+                <div class="help-info">
+                    <div class="faq-section">
+                        <h3 class="help-title">常见问题</h3>
+                        
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>如何查询我的反馈处理进度？</span>
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    提交反馈后，我们会通过您提供的邮箱发送反馈编号，您可以使用该编号在帮助中心查询处理进度。
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>反馈提交后多久会得到回复？</span>
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    我们通常会在1-3个工作日内处理您的反馈并给予回复，紧急问题会优先处理。
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>我可以修改已提交的反馈吗？</span>
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    一旦提交反馈，暂时无法直接修改。您可以通过回复反馈邮件或重新提交新的反馈来补充信息。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-section">
+                        <h3 class="help-title">其他联系方式</h3>
+                        
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h4 class="contact-title">电子邮件</h4>
+                                    <p class="contact-detail">kunniQQ.com</kunniQQ></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h4 class="contact-title">电话支持</h4>
+                                    <p class="contact-detail">9696969696</p>
+                                    <p class="contact-time">工作日 9:00-18:00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa fa-comments"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h4 class="contact-title">在线客服</h4>
+                                    <p class="contact-detail">网站右下角点击"在线客服"</p>
+                                    <p class="contact-time">工作日 9:00-21:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 结束页信息 -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">感谢您的参与和支持</h2>
+            <p class="cta-text">我们致力于提供最优质的学习体验，您的每一条反馈都将帮助我们不断进步。</p>
+            <a href="/myweb/index.html" class="cta-button">
+                返回首页
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">学习平台</h3>
+                    <p class="footer-description">提供高质量的学习资源和工具，助力您的学习与成长。</p>
+                </div>
+                
+                <div class="footer-links-grid">
+                    <div class="footer-links">
+                        <h4 class="footer-subtitle">快速链接</h4>
+                        <ul class="footer-list">
+                            <li><a href="/myweb/index.html" class="footer-link">首页</a></li>
+                            <li><a href="/myweb/learning.html" class="footer-link">学习内容</a></li>
+                            <li><a href="/myweb/content.html" class="footer-link">内容介绍</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-subtitle">工具</h4>
+                        <ul class="footer-list">
+                            <li><a href="ai.html" class="footer-link">AI工具</a></li>
+                            <li><a href="/myweb/feedback.html" class="footer-link">反馈</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-subtitle">联系我们</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">帮助中心</a></li>
+                            <li><a href="#" class="footer-link">联系客服</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2023 学习宣传平台 版权所有</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
