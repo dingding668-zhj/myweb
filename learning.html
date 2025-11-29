@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习内容 - 手语学习平台</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/myweb/LearningCss.css">
+    <script src="/myweb/Learning.js" defer></script>
+</head>
+
+<body class="font-sans">
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="/myweb/logo.jpg" alt="Logo" class="logo-image">
+                    <a href="#" class="logo">默语心声</a>
+                </div>
+                <div class="nav-links">
+                   <a href="index.html" class="nav-link">首页</a>
+                    <a href="content.html" class="nav-link">网站特色</a>
+                    <a href="learning.html" class="nav-link">学习内容</a>
+                    <a href="hire.html" class="nav-link">职业招聘</a>
+                    <a href="talk.html" class="nav-link">社区交流</a>
+                    <a href="feedback.html" class="nav-link">反馈</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 图片互动区域 -->
+    <section class="image-interactive-section">
+        <div class="interactive-container">
+            <div class="image-slider">
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <video src="/myweb/首页demo3.mp4" class="slider-image active" autoplay muted loop></video>
+                    <video src="/myweb/首页demo2.mp4" class="slider-image active" autoplay muted loop></video>
+                    <video src="/myweb/首页demo1.mp4" class="slider-image active" autoplay muted loop></video>
+                    <video src="/myweb/首页demo3.mp4" class="slider-image active" autoplay muted loop></video>
+                </div>
+
+                <button class="slider-btn prev-btn" id="prevBtn">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next-btn" id="nextBtn">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+
+                <div class="slider-indicators" id="sliderIndicators">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                    <span class="indicator" data-index="3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学习内容区域 -->
+    <section class="learning-section">
+        <div class="section-container">
+            <!-- 内容分类 -->
+            <div class="category-filter">
+                <button class="category-btn active">全部</button>
+                <button class="category-btn">手语学习</button>
+                <button class="category-btn">设计创意</button>
+                <button class="category-btn">商业管理</button>
+                <button class="category-btn">个人成长</button>
+            </div>
+
+            <!-- 内容卡片 -->
+            <div class="card-grid">
+                <!-- 卡片1 -->
+                <div class="card">
+                    <div class="card-image-container">
+                    <video src="/myweb/首页demo1.mp4" class="card-image" muted loop ></video>
+                        <div class="card-badge hot">热门</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="meta-item"><i class="fa fa-clock-o"></i> 8周课程</span>
+                            <span class="meta-separator">•</span>
+                            <span class="meta-item"><i class="fa fa-signal"></i> 初级</span>
+                        </div>
+                        <h3 class="card-title">手语初识</h3>
+                        <p class="card-description">学习手语、手语和手语基础知识，掌握现代手语技能。</p>
+                        <div class="card-footer">
+                            <span class="card-price">免费</span>
+                            <a href="study.html" class="card-link">查看详情 <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 卡片2 -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <video src="/myweb/首页demo2.mp4" class="card-image" muted loop></video>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="meta-item"><i class="fa fa-clock-o"></i> 6周课程</span>
+                            <span class="meta-separator">•</span>
+                            <span class="meta-item"><i class="fa fa-signal"></i> 中级</span>
+                        </div>
+                        <h3 class="card-title">手语再识</h3>
+                        <p class="card-description">学习用户和用户体验设计的核心原则，打造优秀的产品体验。</p>
+                        <div class="card-footer">
+                            <span class="card-price">¥199</span>
+                            <a href="#" class="card-link">查看详情 <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 卡片3 -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <video src="/myweb/首页demo3.mp4" class="card-image" muted loop ></video>
+                        <div class="card-badge new">新课</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="meta-item"><i class="fa fa-clock-o"></i> 10周课程</span>
+                            <span class="meta-separator">•</span>
+                            <span class="meta-item"><i class="fa fa-signal"></i> 初级到中级</span>
+                        </div>
+                        <h3 class="card-title">手语三识</h3>
+                        <p class="card-description">掌握分析基础方法和工具，学会从数据中提取有价值的信息。</p>
+                        <div class="card-footer">
+                            <span class="card-price">¥299</span>
+                            <a href="#" class="card-link">查看详情 <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 卡片4 -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <video src="/myweb/demo1.mp4" class="card-image" muted loop ></video>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="meta-item"><i class="fa fa-clock-o"></i> 12周课程</span>
+                            <span class="meta-separator">•</span>
+                            <span class="meta-item"><i class="fa fa-signal"></i> 全级别</span>
+                        </div>
+                        <h3 class="card-title">手语还识</h3>
+                        <p class="card-description">从基础到高级应用，全面学习手语及其应用场景。</p>
+                        <div class="card-footer">
+                            <span class="card-price">¥399</span>
+                            <a href="#" class="card-link">查看详情 <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 卡片5 -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <video src="/myweb/首页demo2.mp4" class="card-image" muted loop ></video>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="meta-item"><i class="fa fa-clock-o"></i> 8周课程</span>
+                            <span class="meta-separator">•</span>
+                            <span class="meta-item"><i class="fa fa-signal"></i> 中级</span>
+                        </div>
+                        <h3 class="card-title">手语五识</h3>
+                        <p class="card-description">学习现代市场营销理论和实践方法，制定有效的营销策略。</p>
+                        <div class="card-footer">
+                            <span class="card-price">¥249</span>
+                            <a href="#" class="card-link">查看详情 <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 卡片6 -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <video src="/myweb/首页demo1.mp4" class="card-image" muted loop ></video>
+                        <div class="card-badge hot">热门</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="meta-item"><i class="fa fa-clock-o"></i> 14周课程</span>
+                            <span class="meta-separator">•</span>
+                            <span class="meta-item"><i class="fa fa-signal"></i> 高级</span>
+                        </div>
+                        <h3 class="card-title">手语之最后一识</h3>
+                        <p class="card-description">了解手语的基本概念、技术原理和应用场景，入门AI领域。</p>
+                        <div class="card-footer">
+                            <span class="card-price">¥499</span>
+                            <a href="#" class="card-link">查看详情 <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 加载更多按钮 -->
+            <div class="load-more-container">
+                <button class="load-more-btn">
+                    加载更多 <i class="fa fa-refresh"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI助手弹窗 -->
+    <div class="ai-assistant hidden" id="aiAssistant">
+        <div class="ai-header">
+            <div class="ai-title">AI助手</div>
+            <div class="ai-close" id="aiCloseBtn"><i class="fa fa-times"></i></div>
+        </div>
+        <div class="ai-chat-area" id="chatArea">
+            <div class="ai-message">
+                <div class="ai-bot-message">你好，我是你的AI学习助手，有什么可以帮助你的学习问题吗？</div>
+            </div>
+        </div>
+        <div class="ai-input-area">
+            <input type="text" class="ai-input" id="aiInput" placeholder="请输入您的问题...">
+            <button class="ai-send" id="aiSendBtn">发送</button>
+        </div>
+    </div>
+    <button class="ai-toggle-btn" id="aiToggleBtn"><i class="fa fa-robot"></i></button>
+
+    <!-- 点击放大弹窗 -->
+    <div class="modal-overlay" id="cardModal">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-media-container">
+                <video src="" class="modal-media" muted loop poster=""></video>
+            </div>
+            <div class="modal-content">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <div class="modal-meta" id="modalMeta">
+                    <!-- 动态填充元数据 -->
+                </div>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-actions">
+                    <span class="modal-price" id="modalPrice"></span>
+                    <button class="modal-play-btn" id="modalPlayBtn">
+                        <i class="fa fa-play"></i> 开始学习
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">学习平台</h3>
+                    <p class="footer-description">提供高质量的学习资源和工具，助力您的学习与成长。</p>
+                </div>
+
+                <div class="footer-links-grid">
+                    <div class="footer-links">
+                        <h4 class="footer-subtitle">快速链接</h4>
+                        <ul class="footer-list">
+                            <li><a href="index.html" class="footer-link">首页</a></li>
+                            <li><a href="learning.html" class="footer-link">学习内容</a></li>
+                            <li><a href="content.html" class="footer-link">内容介绍</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4 class="footer-subtitle">工具</h4>
+                        <ul class="footer-list">
+                            <li><a href="ai.html" class="footer-link">AI工具</a></li>
+                            <li><a href="feedback.html" class="footer-link">反馈</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4 class="footer-subtitle">联系我们</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">帮助中心</a></li>
+                            <li><a href="#" class="footer-link">联系客服</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2023 学习宣传平台 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
