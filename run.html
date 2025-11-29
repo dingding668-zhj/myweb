@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频学习 - Web开发基础</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/myweb/LearningCss.css">
+    <style>
+        /* 视频播放页特有样式 */
+        .video-player-section {
+            padding: 8rem 0 4rem;
+            background-color: #f9fafb;
+        }
+        
+        .player-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .player-container {
+                flex-direction: row;
+            }
+        }
+        
+        .video-wrapper {
+            flex: 3;
+            background-color: #000;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .main-video {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            display: block;
+        }
+        
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 1rem;
+            color: white;
+        }
+        
+        .video-info {
+            margin-top: 1.5rem;
+        }
+        
+        .video-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+        
+        .video-description {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+        
+        
+        
+        .video-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .video-action-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: white;
+            border: 1px solid #d1d5db;
+            color: #374151;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .video-action-btn:hover {
+            border-color: #3b82f6;
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="./public/logo.jpg" alt="Logo" class="logo-image">
+                    <a href="#" class="logo">默语心声</a>
+                </div>
+                <div class="nav-links">
+                   <a href="text1.html" class="nav-link">首页</a>
+                    <a href="content.html" class="nav-link">网站特色</a>
+                    <a href="learning.html" class="nav-link">学习内容</a>
+                    <a href="hire.html" class="nav-link">职业招聘</a>
+                    <a href="talk.html" class="nav-link">社区交流</a>
+                    <a href="feedback.html" class="nav-link">反馈</a>
+                    <a href="login.html" class="btn-login">登录</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 视频播放区域 -->
+    <section class="video-player-section">
+        <div class="section-container">
+            <div class="player-container">
+                <div class="video-main">
+                    <div class="video-wrapper">
+                        <video class="main-video" id="mainVideo" controls>
+                            <source src="./public/首页demo3.mp4" type="video/mp4">
+                            您的浏览器不支持HTML5视频播放
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h1 class="video-title">1.1 Web开发基础入门 - 认识HTML、CSS和JavaScript</h1>
+                        <div class="video-meta">
+                            <span><i class="fa fa-play-circle"></i> 第1章 · 第1课时</span>
+                            <span><i class="fa fa-clock-o"></i> 15:30</span>
+                            <span><i class="fa fa-eye"></i> 12,456次观看</span>
+                        </div>
+                        <p class="video-description">
+                            本节课将介绍Web开发的基本概念，讲解HTML、CSS和JavaScript各自的作用以及它们如何协同工作构建现代网页。我们还会了解前端开发的工作流程和常用工具，帮助你建立对Web开发的整体认知。
+                        </p>
+                        <div class="video-actions">
+                            <button class="video-action-btn">
+                                <i class="fa fa-thumbs-up"></i> 点赞
+                            </button>
+                            <button class="video-action-btn">
+                                <i class="fa fa-bookmark-o"></i> 收藏
+                            </button>
+                            <button class="video-action-btn">
+                                <i class="fa fa-share-alt"></i> 分享
+                            </button>
+                            <button class="video-action-btn">
+                                <i class="fa fa-flag-o"></i> 举报
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- AI助手弹窗 -->
+    <div class="ai-assistant hidden" id="aiAssistant">
+        <div class="ai-header">
+            <div class="ai-title">AI助手</div>
+            <div class="ai-close" id="aiCloseBtn"><i class="fa fa-times"></i></div>
+        </div>
+        <div class="ai-chat-area" id="chatArea">
+            <div class="ai-message">
+                <div class="ai-bot-message">你好，我是你的AI学习助手，有什么可以帮助你的学习问题吗？</div>
+            </div>
+        </div>
+        <div class="ai-input-area">
+            <input type="text" class="ai-input" id="aiInput" placeholder="请输入您的问题...">
+            <button class="ai-send" id="aiSendBtn">发送</button>
+        </div>
+    </div>
+    <button class="ai-toggle-btn" id="aiToggleBtn"><i class="fa fa-robot"></i></button>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">学习平台</h3>
+                    <p class="footer-description">提供高质量的学习资源和工具，助力您的学习与成长。</p>
+                </div>
+
+                <div class="footer-links-grid">
+                    <div class="footer-links">
+                        <h4 class="footer-subtitle">快速链接</h4>
+                        <ul class="footer-list">
+                            <li><a href="index.html" class="footer-link">首页</a></li>
+                            <li><a href="learning.html" class="footer-link">学习内容</a></li>
+                            <li><a href="content.html" class="footer-link">内容介绍</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4 class="footer-subtitle">工具</h4>
+                        <ul class="footer-list">
+                            <li><a href="ai.html" class="footer-link">AI工具</a></li>
+                            <li><a href="feedback.html" class="footer-link">反馈</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4 class="footer-subtitle">联系我们</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">帮助中心</a></li>
+                            <li><a href="#" class="footer-link">联系客服</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2023 学习宣传平台 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // AI助手功能
+        const aiToggleBtn = document.getElementById('aiToggleBtn');
+        const aiAssistant = document.getElementById('aiAssistant');
+        const aiCloseBtn = document.getElementById('aiCloseBtn');
+        const aiSendBtn = document.getElementById('aiSendBtn');
+        const aiInput = document.getElementById('aiInput');
+        const chatArea = document.getElementById('chatArea');
+
+        aiToggleBtn.addEventListener('click', () => {
+            aiAssistant.classList.toggle('hidden');
+        });
+
+        aiCloseBtn.addEventListener('click', () => {
+            aiAssistant.classList.add('hidden');
+        });
+
+        function sendMessage() {
+            const message = aiInput.value.trim();
+            if (message) {
+                // 添加用户消息
+                const userMessageDiv = document.createElement('div');
+                userMessageDiv.className = 'ai-message';
+                userMessageDiv.innerHTML = `<div class="ai-user-message">${message}</div>`;
+                chatArea.appendChild(userMessageDiv);
+                
+                // 清空输入框
+                aiInput.value = '';
+                
+                // 滚动到底部
+                chatArea.scrollTop = chatArea.scrollHeight;
+                
+                // 模拟AI回复
+                setTimeout(() => {
+                    const botMessageDiv = document.createElement('div');
+                    botMessageDiv.className = 'ai-message';
+                    botMessageDiv.innerHTML = '<div class="ai-bot-message">感谢您的提问，我会尽快为您解答这个问题。</div>';
+                    chatArea.appendChild(botMessageDiv);
+                    chatArea.scrollTop = chatArea.scrollHeight;
+                }, 1000);
+            }
+        }
+
+        aiSendBtn.addEventListener('click', sendMessage);
+        aiInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // 视频播放功能
+        const mainVideo = document.getElementById('mainVideo');
+        const lessonItems = document.querySelectorAll('.lesson-item');
+        
+        // 章节切换功能
+        lessonItems.forEach((item, index) => {
+            // 跳过锁定的章节
+            if (item.querySelector('.fa-lock')) {
+                item.style.opacity = '0.7';
+                item.style.cursor = 'not-allowed';
+                return;
+            }
+            
+            item.addEventListener('click', () => {
+                // 更新选中状态
+                lessonItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                
+                // 在实际项目中，这里会加载对应视频
+                const lessonTitle = item.querySelector('.lesson-title').textContent;
+                document.querySelector('.video-title').textContent = `1.${index+1} Web开发基础入门 - ${lessonTitle}`;
+                
+                // 模拟视频加载
+                mainVideo.pause();
+                mainVideo.src = './public/课程demo1.mp4'; // 实际项目中替换为对应视频地址
+                mainVideo.load();
+                mainVideo.play();
+            });
+        });
+    </script>
+</body>
+</html>
