@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社区交流 - 手语学习平台</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/myweb/LearningCss.css">
+    <link rel="stylesheet" href="/myweb/talk.css"> 
+</head>
+<body class="font-sans">
+
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="/wyweb/logo.jpg" alt="Logo" class="logo-image">
+                    <a href="#" class="logo">默语心声</a>
+                </div>
+                <div class="nav-links">
+                    <a href="/mywe/bindex.html" class="nav-link">首页</a>
+                    <a href="/myweb/content.html" class="nav-link">网站特色</a>
+                    <a href="/myweb/learning.html" class="nav-link">学习内容</a>
+                    <a href="/myweb/hire.html" class="nav-link">职业招聘</a>
+                    <a href="/myweb/talk.html" class="nav-link">社区交流</a>
+                    <a href="/myweb/feedback.html" class="nav-link">反馈</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 社区主内容区 -->
+    <section class="community-section">
+        <div class="community-container">
+            <aside class="community-sidebar desktop-only">
+                <div class="sidebar-module">
+                    <h3 class="sidebar-title">话题分类</h3>
+                    <ul class="category-list">
+                        <li><a href="#" class="category-item active"><i class="fa fa-globe"></i> 全部话题</a></li>
+                        <li><a href="#" class="category-item"><i class="fa fa-hand-paper-o"></i> 基础手语</a></li>
+                        <li><a href="#" class="category-item"><i class="fa fa-comments-o"></i> 日常交流</a></li>
+                        <li><a href="#" class="category-item"><i class="fa fa-certificate"></i> 专业考级</a></li>
+                        <li><a href="#" class="category-item"><i class="fa fa-book"></i> 手语文化</a></li>
+                        <li><a href="#" class="category-item"><i class="fa fa-question-circle"></i> 求助问答</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-module">
+                    <h3 class="sidebar-title">活跃用户</h3>
+                    <ul class="user-list">
+                        <li class="user-item">
+                            <img src="/myweb/logo.jpg" alt="用户头像" class="user-avatar">
+                            <div class="user-info">
+                                <span class="user-name">手语达人</span>
+                                <span class="user-tag">资深教师</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="sidebar-module notice-module">
+                    <h3 class="sidebar-title">社区公告</h3>
+                    <div class="notice-content">
+                        <p>【手语大赛】即日起至10月31日，上传你的手语作品参与评比，赢取学习礼包～</p>
+                        <a href="#" class="notice-link">查看详情</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 移动端顶部筛选栏 -->
+            <div class="mobile-filter mobile-only">
+                <select class="category-select">
+                    <option value="all">全部话题</option>
+                    <option value="basic">基础手语</option>
+                    <option value="daily">日常交流</option>
+                    <option value="exam">专业考级</option>
+                    <option value="culture">手语文化</option>
+                    <option value="help">求助问答</option>
+                </select>
+            </div>
+
+            <!-- 主内容区 -->
+            <main class="community-main">
+                <!-- 身份与发布区 -->
+                <div class="user-upload-area">
+                    <div class="user-info">
+                        <img src="/myweb/logo.jpg" alt="当前用户头像" class="current-avatar">
+                        <span class="current-name">请登录参与交流</span> <!-- 登录后显示用户名 -->
+                    </div>
+                    <button class="publish-btn" id="publishBtn">
+                        <i class="fa fa-plus"></i> 发布内容
+                    </button>
+                </div>
+
+                <!-- 搜索栏 -->
+                <div class="search-area">
+                    <div class="search-box">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="搜索话题、用户或内容...">
+                    </div>
+                </div>
+
+                <!-- 话题分类切换 -->
+                <div class="topic-tabs">
+                    <button class="tab-btn active">热门</button>
+                    <button class="tab-btn">最新</button>
+                    <button class="tab-btn">推荐</button>
+                </div>
+
+                <!-- 帖子列表 -->
+                <div class="post-list">
+                    <!-- 帖子卡片1 -->
+                    <div class="post-card">
+                        <div class="post-header">
+                            <img src="/myweb/logo.jpg" alt="用户头像" class="post-avatar">
+                            <div class="post-user-info">
+                                <span class="post-username">小语学手语</span>
+                                <span class="post-time">2小时前</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">请教大家！“谢谢”的手语动作有几种表达？</h3>
+                            <p class="post-text">最近学习日常手语，发现不同教材里“谢谢”的动作有点不一样，想问问资深小伙伴们，日常交流中最常用的是哪种呀？有没有地域差异？</p>
+                            <div class="post-actions">
+                                <button class="action-btn like-btn"><i class="fa fa-thumbs-o-up"></i> 28</button>
+                                <button class="action-btn comment-btn"><i class="fa fa-comment-o"></i> 12</button>
+                                <button class="action-btn collect-btn"><i class="fa fa-star-o"></i> 收藏</button>
+                                <button class="action-btn share-btn"><i class="fa fa-share"></i> 分享</button>
+                            </div>
+                            <!-- 评论区（默认折叠，点击展开） -->
+                            <div class="post-comments hidden">
+                                <div class="comment-item">
+                                    <img src="/myweb/logo.jpg" alt="评论用户头像" class="comment-avatar">
+                                    <div class="comment-content">
+                                        <span class="comment-username">手语达人</span>
+                                        <span class="comment-tag">资深教师</span>
+                                        <p class="comment-text">最常用的是双手合十点头的表达，另外一种是单手抚胸鞠躬，日常交流两种都可以，没有地域差异哦～</p>
+                                    </div>
+                                </div>
+                                <!-- 更多评论 -->
+                                <div class="comment-input-area">
+                                    <input type="text" placeholder="发表你的看法...">
+                                    <button class="send-comment-btn">发送</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 帖子卡片2（带视频） -->
+                    <div class="post-card">
+                        <div class="post-header">
+                            <img src="/myweb/logo.jpg" alt="用户头像" class="post-avatar">
+                            <div class="post-user-info">
+                                <span class="post-username">手语爱好者</span>
+                                <span class="post-time">昨天 15:30</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">分享我的手语练习视频，大家帮忙看看动作标准吗？</h3>
+                            <div class="post-media">
+                                <video src="/myweb/首页demo3" class="post-video" muted loop poster="./public/video-cover.jpg"></video>
+                            </div>
+                            <div class="post-actions">
+                                <button class="action-btn like-btn"><i class="fa fa-thumbs-o-up"></i> 45</button>
+                                <button class="action-btn comment-btn"><i class="fa fa-comment-o"></i> 18</button>
+                                <button class="action-btn collect-btn"><i class="fa fa-star-o"></i> 收藏</button>
+                                <button class="action-btn share-btn"><i class="fa fa-share"></i> 分享</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 重复6-8个帖子卡片，包含图文、纯文字、视频三种类型 -->
+                </div>
+
+                <!-- 加载更多 -->
+                <div class="load-more-container">
+                    <button class="load-more-btn">
+                        加载更多 <i class="fa fa-refresh"></i>
+                    </button>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- 发布内容弹窗 -->
+    <div class="publish-modal hidden" id="publishModal">
+        <div class="modal-header">
+            <h3 class="modal-title">发布内容</h3>
+            <button class="modal-close" id="modalClose"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+            <div class="publish-type">
+                <button class="type-btn active"><i class="fa fa-file-text-o"></i> 文字/图片</button>
+                <button class="type-btn"><i class="fa fa-video-camera"></i> 视频</button>
+            </div>
+            <div class="publish-form">
+                <input type="text" class="post-title-input" placeholder="请输入标题（可选）">
+                <textarea class="post-content-input" placeholder="分享你的学习心得、问题或作品..."></textarea>
+                <div class="media-upload">
+                    <label class="upload-label">
+                        <i class="fa fa-upload"></i> 上传图片/视频
+                        <input type="file" class="upload-input" multiple accept="image/*,video/*">
+                    </label>
+                </div>
+                <div class="topic-selector">
+                    <label>选择话题分类：</label>
+                    <select class="category-publish">
+                        <option value="basic">基础手语</option>
+                        <option value="daily">日常交流</option>
+                        <option value="exam">专业考级</option>
+                        <option value="culture">手语文化</option>
+                        <option value="help">求助问答</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="cancel-btn">取消</button>
+            <button class="confirm-publish-btn">发布</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>
